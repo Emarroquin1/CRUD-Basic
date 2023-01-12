@@ -95,7 +95,7 @@ if(opcion){
  
   }
  count++;
- 
+ return true;
   })
  this.setState({data:employees});
  
@@ -190,18 +190,18 @@ ocupacion
 </td>
        </tr>
 
-{this.state.data.map((elemento)=>
-<tr>
+{this.state.data.map((elemento,i)=>
+<tr key={i}>
 
-<td key={elemento.id}>
+<td>
 {elemento.id}
 </td>
 
-<td key={elemento.nombre}>
+<td >
   {elemento.nombre}
 </td>
 
-<td key={elemento.ocupacion}>
+<td>
 
 {elemento.ocupacion}
 </td>
